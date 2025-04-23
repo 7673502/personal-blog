@@ -16,9 +16,15 @@ import { NAV_LINKS, SITE } from "@/siteConfig.ts";
         Object.keys(NAV_LINKS).map((navItemKey) => {
           return (
             <li>
-              <a href={NAV_LINKS[navItemKey].path} class="prose">
-                {NAV_LINKS[navItemKey].label}
+
+              <a href={NAV_LINKS[navItemKey].path} class="group relative inline-block text-muted-text transition-colors duration-200 hover:text-primary">
+                <span class="relative">
+                  <span class="inline-block">{NAV_LINKS[navItemKey].label}</span>
+                  <span class="underline-animation"></span>
+                </span>
               </a>
+
+
             </li>
           );
         })

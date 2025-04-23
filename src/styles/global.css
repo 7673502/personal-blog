@@ -29,11 +29,11 @@
 
 @theme {
   --color-bg: rgb(255, 255, 255);
-  --color-link: oklch(46.97% 0.2734 267.56);
+  --color-link: #6ea5ff;
   --color-muted-text: var(--color-neutral-700);
 
   --color-dark-bg: var(--color-neutral-950);
-  --color-dark-link: oklch(73.9% 0.1387 282.47);
+  --color-dark-link: #6ea5ff;
   --color-dark-muted-text: var(--color-neutral-300);
 }
 
@@ -43,13 +43,13 @@
   --prose-link-underline-color: var(--color-link);
 
   color: var(--prose-link-color);
-  font-weight: var(--font-weight-semibold);
+  font-weight: normal;
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-color: var(--prose-link-underline-color);
   text-decoration-thickness: 1px;
   & code {
-    font-weight: var(--font-weight-semibold);
+    font-weight: normal;
   }
 }
 
@@ -57,3 +57,50 @@
   --prose-link-color: var(--color-dark-link);
   --prose-link-underline-color: var(--color-dark-link);
 }
+
+.text-muted-text {
+  color: var(--color-muted-text);
+}
+
+.dark .text-muted-text {
+  color: var(--color-dark-muted-text);
+}
+
+.underline-animation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.group:hover .underline-animation {
+  transform: scaleX(1);
+}
+
+.link {
+  position: relative;
+  text-decoration: none; /* if you don’t want the default underline */
+  color: var(--prose-link-color);
+}
+
+.link {
+  color: var(--prose-link-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--prose-link-color);
+  text-decoration-thickness: 1px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--color-link-hover, #3b82f6); /* e.g. Tailwind blue-500 */
+  text-decoration-color: var(--color-link-hover, #3b82f6);
+}
+
+
+
