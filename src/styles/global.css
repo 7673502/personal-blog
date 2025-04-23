@@ -70,16 +70,17 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 1px;
-  width: 100%;
+  height: 2px;
+  max-width: 0;
   background-color: currentColor;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease-in-out;
+  border-radius: 9999px;
+  transition: max-width 0.2s ease-in-out;
+  width: 100%;
+  overflow: hidden;
 }
 
 .group:hover .underline-animation {
-  transform: scaleX(1);
+  max-width: 100%;
 }
 
 .link {
