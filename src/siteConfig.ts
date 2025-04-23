@@ -25,13 +25,13 @@ export const SOCIAL_LINKS: SocialLinks = {
     label: "GitHub",
     href: "https://github.com/7673502",
   },
-  bluesky: {
-    label: "Bluesky",
-    href: "https://bsky.app/profile/pramod1.bsky.social",
-  },
   instagram: {
     label: "Instagram",
     href: "https://www.instagram.com/pramodanandarao/",
+  },
+  bluesky: {
+    label: "Bluesky",
+    href: "https://bsky.app/profile/pramod1.bsky.social",
   },
   linkedin: {
     label: "LinkedIn",

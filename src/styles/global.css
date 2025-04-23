@@ -4,9 +4,13 @@
 
 :root {
   color-scheme: light dark;
+  --button-bg: transparent; 
+  --button-text: #000000;
 }
 .dark {
   color-scheme: dark;
+  --button-bg: transparent; 
+  --button-text: #ffffff;
 }
 .light {
   color-scheme: light;
